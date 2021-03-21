@@ -14,7 +14,7 @@ public class Magic extends Hero {
         Random random = new Random();
         int n = random.nextInt(3) + 1;
         for (int i = 0; i <heroes.length ; i++) {
-            if(heroes[i].getHealth()>0 && boss.getHealth() > 0 && heroes[i] != this){
+            if(heroes[i].getHealth()>0 && boss.getHealth() > 0){
                 heroes[i].setDamage(heroes[i].getDamage() + n);
             }
         }

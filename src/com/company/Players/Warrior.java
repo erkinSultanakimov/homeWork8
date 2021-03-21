@@ -12,7 +12,7 @@ public class Warrior extends Hero {
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
         Random random = new Random();
-        int random1 = random.nextInt(4) + 2;
+        int random1 = random.nextInt(3) + 2;
         for (int i = 0; i < heroes.length; i++) {
             if (heroes[i] == this) {
                 heroes[i].setDamage(heroes[i].getDamage() * random1);
