@@ -10,8 +10,8 @@ public class Game {
         Magic magic = new Magic(250, 25, " Magic ", EnumSuperAbility.BOOST);
         Medic doc = new Medic(220, 5, " Doc ", 10, EnumSuperAbility.HEAL);
         Medic assistent = new Medic(260, 10, " Assistent ", 5, EnumSuperAbility.HEAL);
-        //Thor thor = new Thor(100,10," Thor",EnumSuperAbility.THOR);
-        Hero[] heroes = {warrior, berserk, magic, doc, assistent};
+        Thor thor = new Thor(100,10," Thor",EnumSuperAbility.THOR);
+        Hero[] heroes = {warrior, berserk, magic, doc, assistent, thor};
         System.out.println("______The game_____");
         printStatistics(boss, heroes);
         while (!isGameFinished(boss,heroes)){
@@ -23,6 +23,7 @@ public class Game {
         bossHit(boss, heroes);
         heroesHit(boss, heroes);
         applySuperAbbilities(boss, heroes);
+
         printStatistics(boss, heroes);
     }
     private static boolean isGameFinished(Boss boss, Hero[] heroes){
